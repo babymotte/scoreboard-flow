@@ -1,0 +1,1676 @@
+[
+    {
+        "id": "7f8c0ad0e627bdb6",
+        "type": "tab",
+        "label": "Remote Control",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a1b3368ead2e00e5",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5dad5d92f0e313de",
+        "type": "subflow",
+        "name": "time trigger",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "12ee76f7998a3d48"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 300,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "12ee76f7998a3d48",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 300,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "12ee76f7998a3d48",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 300,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "12ee76f7998a3d48",
+                        "port": 2
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "LOWER",
+                "type": "num",
+                "value": "1000"
+            },
+            {
+                "name": "UPPER",
+                "type": "str",
+                "value": "5000"
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "acf29aedb2cb6444",
+        "type": "worterbuch-server",
+        "host": "scoreboard.local",
+        "port": "80",
+        "reconnect": true
+    },
+    {
+        "id": "2e20aad8a8a0bf5a",
+        "type": "ui_tab",
+        "name": "Score Board",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f5441d112e5a76ed",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "dark"
+            }
+        },
+        "site": {
+            "name": "Score Board Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f9c66c9e79a193fb",
+        "type": "ui_group",
+        "name": "Home",
+        "tab": "2e20aad8a8a0bf5a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "949eb1a1e17924b1",
+        "type": "ui_group",
+        "name": "Guest",
+        "tab": "2e20aad8a8a0bf5a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cf1a81ac6b0b643d",
+        "type": "ui_group",
+        "name": "Admin",
+        "tab": "2e20aad8a8a0bf5a",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "12ee76f7998a3d48",
+        "type": "function",
+        "z": "5dad5d92f0e313de",
+        "name": "time trigger",
+        "func": "const state = flow[node.id];\n\nif ((state.lastValue == undefined || state.lastValue == 0) && msg.payload == 1) {\n    // switch closed\n    state.lastValue = 1;\n    state.closed = Date.now();\n    state.timeoutLower = setTimeout(() => node.send([null, msg, null]), state.lower);\n    state.timeoutUpper = setTimeout(() => node.send([null, null, msg]), state.upper);\n    return null;\n}\n\nif (state.lastValue == 1 && msg.payload == 0) {\n    // switch opened\n    state.lastValue = 0;\n    const duration = Date.now() - state.closed;\n    msg.payload = duration;\n    if (duration > state.lower) {\n        // first timeout exceeded but not second\n        clearTimeout(state.timeoutUpper);\n        return null;\n    } else if (duration > state.upper) {\n        // second timeout exceeded\n        return null;\n    } else {\n        // prevent medium and long press event\n        clearTimeout(state.timeoutLower);\n        clearTimeout(state.timeoutUpper);\n        return [msg, null, null];\n    }\n}\n\nreturn null;",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n\nconst state = {};\nstate.lower = parseInt(env.get(\"LOWER\"));\nstate.upper = parseInt(env.get(\"UPPER\"));\nflow[node.id] = state;",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b4a32a4697615823",
+        "type": "rpi-gpio in",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "Button A",
+        "pin": "10",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 80,
+        "y": 100,
+        "wires": [
+            [
+                "84ab90f9ff74c23b"
+            ]
+        ]
+    },
+    {
+        "id": "21836663b71c2f92",
+        "type": "rpi-gpio in",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "Button B",
+        "pin": "27",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 80,
+        "y": 260,
+        "wires": [
+            [
+                "fe2638c051f02209"
+            ]
+        ]
+    },
+    {
+        "id": "2469359a62b26422",
+        "type": "rpi-gpio in",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "Button C",
+        "pin": "2",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 80,
+        "y": 440,
+        "wires": [
+            [
+                "0461e7d9915a5db3"
+            ]
+        ]
+    },
+    {
+        "id": "e8d42e0a4c1e41f1",
+        "type": "rpi-gpio in",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "Button D",
+        "pin": "4",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 80,
+        "y": 620,
+        "wires": [
+            [
+                "4bb0f17e5b7e747a"
+            ]
+        ]
+    },
+    {
+        "id": "8e06974d3ac02eec",
+        "type": "change",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "inc",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "increment",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 80,
+        "wires": [
+            [
+                "cb11f98fdbd2caea"
+            ]
+        ]
+    },
+    {
+        "id": "069debea27263e82",
+        "type": "change",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "dec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "decrement",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 120,
+        "wires": [
+            [
+                "cb11f98fdbd2caea"
+            ]
+        ]
+    },
+    {
+        "id": "c24eed7fc9809745",
+        "type": "worterbuch-get",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "key": "topic",
+        "x": 1050,
+        "y": 400,
+        "wires": [
+            [
+                "afcb5172f06ce270"
+            ]
+        ]
+    },
+    {
+        "id": "afcb5172f06ce270",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "update",
+        "func": "if(msg.action == \"increment\") {\n    msg.payload += 1;\n}\n\nif (msg.action == \"decrement\") {\n    msg.payload = Math.max(msg.payload - 1, 0);\n}\n\nif (msg.action == \"reset\") {\n    msg.payload = 0;\n}\n\nif (msg.action == \"switch\") {\n    msg.payload = !msg.payload;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 400,
+        "wires": [
+            [
+                "72f572d67312311d"
+            ]
+        ]
+    },
+    {
+        "id": "72f572d67312311d",
+        "type": "worterbuch-set",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "x": 1370,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "84ab90f9ff74c23b",
+        "type": "subflow:5dad5d92f0e313de",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "8e06974d3ac02eec"
+            ],
+            [
+                "069debea27263e82"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "cb11f98fdbd2caea",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "home",
+        "func": "msg.topic = \"scoreboard/home\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "6aca8aa5d3eeb6f7"
+            ]
+        ]
+    },
+    {
+        "id": "6aca8aa5d3eeb6f7",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "score",
+        "func": "msg.topic += \"/score\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 100,
+        "wires": [
+            [
+                "c24eed7fc9809745"
+            ]
+        ]
+    },
+    {
+        "id": "c647c40fe72e0fae",
+        "type": "change",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "inc",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "increment",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "85d094f14b9449e9"
+            ]
+        ]
+    },
+    {
+        "id": "ba78d58eaa9b840b",
+        "type": "change",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "dec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "decrement",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "85d094f14b9449e9"
+            ]
+        ]
+    },
+    {
+        "id": "fe2638c051f02209",
+        "type": "subflow:5dad5d92f0e313de",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "x": 240,
+        "y": 260,
+        "wires": [
+            [
+                "c647c40fe72e0fae"
+            ],
+            [
+                "ba78d58eaa9b840b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "85d094f14b9449e9",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "guest",
+        "func": "msg.topic = \"scoreboard/guest\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 260,
+        "wires": [
+            [
+                "3a36c660fc3351d4"
+            ]
+        ]
+    },
+    {
+        "id": "3a36c660fc3351d4",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "score",
+        "func": "msg.topic += \"/score\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 260,
+        "wires": [
+            [
+                "c24eed7fc9809745"
+            ]
+        ]
+    },
+    {
+        "id": "f2a08e1b243c2515",
+        "type": "inject",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 300,
+        "wires": [
+            [
+                "ba78d58eaa9b840b"
+            ]
+        ]
+    },
+    {
+        "id": "689ca632ee7af472",
+        "type": "inject",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "c647c40fe72e0fae"
+            ]
+        ]
+    },
+    {
+        "id": "51e12f42379d323c",
+        "type": "inject",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 60,
+        "wires": [
+            [
+                "8e06974d3ac02eec"
+            ]
+        ]
+    },
+    {
+        "id": "f0067f33217a0cef",
+        "type": "inject",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "069debea27263e82"
+            ]
+        ]
+    },
+    {
+        "id": "0461e7d9915a5db3",
+        "type": "subflow:5dad5d92f0e313de",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "x": 240,
+        "y": 420,
+        "wires": [
+            [],
+            [
+                "e7ac78bfc04de756",
+                "cf47ccb8dce4b09e",
+                "1a8c75a503ab9471"
+            ],
+            [
+                "53136cc92c200f0e"
+            ]
+        ]
+    },
+    {
+        "id": "e7ac78bfc04de756",
+        "type": "change",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "inc",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "increment",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "f18def4a0c4294e9"
+            ]
+        ]
+    },
+    {
+        "id": "f18def4a0c4294e9",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "home",
+        "func": "msg.topic = \"scoreboard/home\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 420,
+        "wires": [
+            [
+                "4c82e44f661b5039"
+            ]
+        ]
+    },
+    {
+        "id": "4c82e44f661b5039",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "set",
+        "func": "msg.topic += \"/set\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 420,
+        "wires": [
+            [
+                "c24eed7fc9809745"
+            ]
+        ]
+    },
+    {
+        "id": "cf47ccb8dce4b09e",
+        "type": "change",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "reset",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "2e5d5d7437244736",
+                "458e64e74592e049"
+            ]
+        ]
+    },
+    {
+        "id": "2e5d5d7437244736",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "home",
+        "func": "msg.topic = \"scoreboard/home\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 460,
+        "wires": [
+            [
+                "8f5803085052355f"
+            ]
+        ]
+    },
+    {
+        "id": "8f5803085052355f",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "score",
+        "func": "msg.topic += \"/score\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 460,
+        "wires": [
+            [
+                "c24eed7fc9809745"
+            ]
+        ]
+    },
+    {
+        "id": "7c0102d75ec6f2a3",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "score",
+        "func": "msg.topic += \"/score\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 500,
+        "wires": [
+            [
+                "c24eed7fc9809745"
+            ]
+        ]
+    },
+    {
+        "id": "458e64e74592e049",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "guest",
+        "func": "msg.topic = \"scoreboard/guest\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "7c0102d75ec6f2a3"
+            ]
+        ]
+    },
+    {
+        "id": "1a8c75a503ab9471",
+        "type": "change",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "switch",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "switch",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 400,
+        "wires": [
+            [
+                "da2bfd3586db3681"
+            ]
+        ]
+    },
+    {
+        "id": "4bb0f17e5b7e747a",
+        "type": "subflow:5dad5d92f0e313de",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "x": 240,
+        "y": 600,
+        "wires": [
+            [],
+            [
+                "b7a6031dea4e75a1",
+                "a7bfd93559107ec9",
+                "86b8386703d1ee0f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b7a6031dea4e75a1",
+        "type": "change",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "inc",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "increment",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 620,
+        "wires": [
+            [
+                "50615485c791ecb4"
+            ]
+        ]
+    },
+    {
+        "id": "50615485c791ecb4",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "guest",
+        "func": "msg.topic = \"scoreboard/guest\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "f596e09750de253b"
+            ]
+        ]
+    },
+    {
+        "id": "f596e09750de253b",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "set",
+        "func": "msg.topic += \"/set\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 600,
+        "wires": [
+            [
+                "c24eed7fc9809745"
+            ]
+        ]
+    },
+    {
+        "id": "a7bfd93559107ec9",
+        "type": "change",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "reset",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 660,
+        "wires": [
+            [
+                "966318de97f36c9a",
+                "88f03e8c73d838d1"
+            ]
+        ]
+    },
+    {
+        "id": "966318de97f36c9a",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "guest",
+        "func": "msg.topic = \"scoreboard/guest\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 640,
+        "wires": [
+            [
+                "76a380b85aa678a0"
+            ]
+        ]
+    },
+    {
+        "id": "76a380b85aa678a0",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "score",
+        "func": "msg.topic += \"/score\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 640,
+        "wires": [
+            [
+                "c24eed7fc9809745"
+            ]
+        ]
+    },
+    {
+        "id": "dd79bb55636f39c5",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "score",
+        "func": "msg.topic += \"/score\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 680,
+        "wires": [
+            [
+                "c24eed7fc9809745"
+            ]
+        ]
+    },
+    {
+        "id": "88f03e8c73d838d1",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "home",
+        "func": "msg.topic = \"scoreboard/home\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 680,
+        "wires": [
+            [
+                "dd79bb55636f39c5"
+            ]
+        ]
+    },
+    {
+        "id": "86b8386703d1ee0f",
+        "type": "change",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "switch",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "switch",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "b54981ae15985ef3"
+            ]
+        ]
+    },
+    {
+        "id": "7e3d27b19a6ff381",
+        "type": "inject",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 460,
+        "wires": [
+            [
+                "e7ac78bfc04de756",
+                "cf47ccb8dce4b09e",
+                "1a8c75a503ab9471"
+            ]
+        ]
+    },
+    {
+        "id": "27deb85a67528e8e",
+        "type": "inject",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 640,
+        "wires": [
+            [
+                "a7bfd93559107ec9",
+                "b7a6031dea4e75a1",
+                "86b8386703d1ee0f"
+            ]
+        ]
+    },
+    {
+        "id": "4bd91ba6a2040b6d",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "switch",
+        "func": "msg.topic = \"scoreboard/switched\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 380,
+        "wires": [
+            [
+                "c24eed7fc9809745"
+            ]
+        ]
+    },
+    {
+        "id": "4ae83ea2195ede02",
+        "type": "function",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "switch",
+        "func": "msg.topic = \"scoreboard/switched\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 560,
+        "wires": [
+            [
+                "c24eed7fc9809745"
+            ]
+        ]
+    },
+    {
+        "id": "b54981ae15985ef3",
+        "type": "delay",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 610,
+        "y": 560,
+        "wires": [
+            [
+                "4ae83ea2195ede02"
+            ]
+        ]
+    },
+    {
+        "id": "da2bfd3586db3681",
+        "type": "delay",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 610,
+        "y": 380,
+        "wires": [
+            [
+                "4bd91ba6a2040b6d"
+            ]
+        ]
+    },
+    {
+        "id": "53136cc92c200f0e",
+        "type": "link out",
+        "z": "7f8c0ad0e627bdb6",
+        "name": "reset all",
+        "mode": "link",
+        "links": [
+            "24404abef4de15f9"
+        ],
+        "x": 415,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b513eafb58e974af",
+        "type": "worterbuch-sub",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "key": "scoreboard/home/team",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "620dd8f235742ef1"
+            ]
+        ]
+    },
+    {
+        "id": "af22e865df2aed49",
+        "type": "worterbuch-sub",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "key": "scoreboard/guest/team",
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "ac83909470f7d376"
+            ]
+        ]
+    },
+    {
+        "id": "620dd8f235742ef1",
+        "type": "ui_text_input",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "f9c66c9e79a193fb",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "e50f48a10a659d47"
+            ]
+        ]
+    },
+    {
+        "id": "ac83909470f7d376",
+        "type": "ui_text_input",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "949eb1a1e17924b1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "e50f48a10a659d47"
+            ]
+        ]
+    },
+    {
+        "id": "b4a3563fd4aa537b",
+        "type": "ui_numeric",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "label": "Score",
+        "tooltip": "",
+        "group": "f9c66c9e79a193fb",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "wrap": true,
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "99",
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "e50f48a10a659d47"
+            ]
+        ]
+    },
+    {
+        "id": "a81dde41ae40c901",
+        "type": "ui_numeric",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "label": "Score",
+        "tooltip": "",
+        "group": "949eb1a1e17924b1",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "99",
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 300,
+        "wires": [
+            [
+                "e50f48a10a659d47"
+            ]
+        ]
+    },
+    {
+        "id": "1e482f48a2534b42",
+        "type": "worterbuch-sub",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "key": "scoreboard/home/score",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "b4a3563fd4aa537b"
+            ]
+        ]
+    },
+    {
+        "id": "0323a5c072e81441",
+        "type": "worterbuch-sub",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "key": "scoreboard/guest/score",
+        "x": 210,
+        "y": 300,
+        "wires": [
+            [
+                "a81dde41ae40c901"
+            ]
+        ]
+    },
+    {
+        "id": "ba8b5ebb9114fa5f",
+        "type": "ui_numeric",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "label": "Set",
+        "tooltip": "",
+        "group": "f9c66c9e79a193fb",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "99",
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [
+                "e50f48a10a659d47"
+            ]
+        ]
+    },
+    {
+        "id": "4e630015056f8f9f",
+        "type": "ui_numeric",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "label": "Set",
+        "tooltip": "",
+        "group": "949eb1a1e17924b1",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "99",
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 440,
+        "wires": [
+            [
+                "e50f48a10a659d47"
+            ]
+        ]
+    },
+    {
+        "id": "4f59f1552422034c",
+        "type": "worterbuch-sub",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "key": "scoreboard/home/set",
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "ba8b5ebb9114fa5f"
+            ]
+        ]
+    },
+    {
+        "id": "cb9c4a108c85edf3",
+        "type": "worterbuch-sub",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "key": "scoreboard/guest/set",
+        "x": 200,
+        "y": 440,
+        "wires": [
+            [
+                "4e630015056f8f9f"
+            ]
+        ]
+    },
+    {
+        "id": "071c0ba0aec72781",
+        "type": "worterbuch-sub",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "key": "scoreboard/switched",
+        "x": 200,
+        "y": 520,
+        "wires": [
+            [
+                "4ad7e81cc551204d"
+            ]
+        ]
+    },
+    {
+        "id": "4ad7e81cc551204d",
+        "type": "ui_switch",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "label": "Switched",
+        "tooltip": "",
+        "group": "cf1a81ac6b0b643d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 420,
+        "y": 520,
+        "wires": [
+            [
+                "e50f48a10a659d47"
+            ]
+        ]
+    },
+    {
+        "id": "0f85d66bd8bb78e5",
+        "type": "ui_button",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "group": "cf1a81ac6b0b643d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reset All",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 600,
+        "wires": [
+            [
+                "e13c4016eaf4fea5"
+            ]
+        ]
+    },
+    {
+        "id": "e13c4016eaf4fea5",
+        "type": "function",
+        "z": "a1b3368ead2e00e5",
+        "name": "reset all",
+        "func": "const msgs = [\n    { topic: \"scoreboard/home/score\", payload: 0 },\n    { topic: \"scoreboard/home/set\", payload: 0 },\n    { topic: \"scoreboard/guest/score\", payload: 0 },\n    { topic: \"scoreboard/guest/set\", payload: 0 },\n    { topic: \"scoreboard/switched\", payload: false },\n];\nreturn [msgs];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 600,
+        "wires": [
+            [
+                "e50f48a10a659d47"
+            ]
+        ]
+    },
+    {
+        "id": "e50f48a10a659d47",
+        "type": "worterbuch-set",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "x": 770,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ed205ce98eebc66b",
+        "type": "inject",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 640,
+        "wires": [
+            [
+                "e13c4016eaf4fea5"
+            ]
+        ]
+    },
+    {
+        "id": "24404abef4de15f9",
+        "type": "link in",
+        "z": "a1b3368ead2e00e5",
+        "name": "long press",
+        "links": [
+            "53136cc92c200f0e"
+        ],
+        "x": 185,
+        "y": 680,
+        "wires": [
+            [
+                "e13c4016eaf4fea5"
+            ]
+        ]
+    },
+    {
+        "id": "8d12a48c51b54a8e",
+        "type": "worterbuch-sub",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "server": "acf29aedb2cb6444",
+        "key": "scoreboard/theme",
+        "x": 190,
+        "y": 40,
+        "wires": [
+            [
+                "f1a545a11502e28c"
+            ]
+        ]
+    },
+    {
+        "id": "f1a545a11502e28c",
+        "type": "ui_dropdown",
+        "z": "a1b3368ead2e00e5",
+        "name": "",
+        "label": "Theme",
+        "tooltip": "",
+        "place": "Theme",
+        "group": "cf1a81ac6b0b643d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Red/Green",
+                "value": "Red/Green",
+                "type": "str"
+            },
+            {
+                "label": "Blue/Yellow",
+                "value": "Blue/Yellow",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 420,
+        "y": 40,
+        "wires": [
+            [
+                "e50f48a10a659d47"
+            ]
+        ]
+    }
+]
