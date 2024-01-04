@@ -82,8 +82,9 @@
   {
     "id": "acf29aedb2cb6444",
     "type": "worterbuch-server",
-    "host": "scoreboard.local",
+    "host": "score.board",
     "port": "80",
+    "auth": "",
     "reconnect": true
   },
   {
@@ -349,9 +350,10 @@
     "name": "",
     "server": "acf29aedb2cb6444",
     "key": "topic",
+    "keyType": "msg",
     "x": 1050,
     "y": 400,
-    "wires": [["afcb5172f06ce270"]]
+    "wires": [["afcb5172f06ce270"], []]
   },
   {
     "id": "afcb5172f06ce270",
@@ -374,6 +376,10 @@
     "z": "7f8c0ad0e627bdb6",
     "name": "",
     "server": "acf29aedb2cb6444",
+    "key": "topic",
+    "keyType": "msg",
+    "value": "payload",
+    "valueType": "msg",
     "x": 1370,
     "y": 400,
     "wires": []
@@ -1028,7 +1034,7 @@
     "key": "scoreboard/home/team",
     "x": 200,
     "y": 100,
-    "wires": [["620dd8f235742ef1"]]
+    "wires": [["620dd8f235742ef1"], [], []]
   },
   {
     "id": "af22e865df2aed49",
@@ -1039,7 +1045,7 @@
     "key": "scoreboard/guest/team",
     "x": 200,
     "y": 160,
-    "wires": [["ac83909470f7d376"]]
+    "wires": [["ac83909470f7d376"], [], []]
   },
   {
     "id": "620dd8f235742ef1",
@@ -1055,10 +1061,10 @@
     "passthru": false,
     "mode": "text",
     "delay": 300,
-    "topic": "topic",
+    "topic": "scoreboard/home/team",
     "sendOnBlur": true,
     "className": "",
-    "topicType": "msg",
+    "topicType": "str",
     "x": 420,
     "y": 100,
     "wires": [["e50f48a10a659d47"]]
@@ -1077,10 +1083,10 @@
     "passthru": false,
     "mode": "text",
     "delay": 300,
-    "topic": "topic",
+    "topic": "scoreboard/guest/team",
     "sendOnBlur": true,
     "className": "",
-    "topicType": "msg",
+    "topicType": "str",
     "x": 420,
     "y": 160,
     "wires": [["e50f48a10a659d47"]]
@@ -1098,8 +1104,8 @@
     "height": 0,
     "wrap": true,
     "passthru": false,
-    "topic": "topic",
-    "topicType": "msg",
+    "topic": "scoreboard/home/score",
+    "topicType": "str",
     "format": "{{value}}",
     "min": 0,
     "max": "99",
@@ -1122,8 +1128,8 @@
     "height": 0,
     "wrap": false,
     "passthru": false,
-    "topic": "topic",
-    "topicType": "msg",
+    "topic": "scoreboard/guest/score",
+    "topicType": "str",
     "format": "{{value}}",
     "min": 0,
     "max": "99",
@@ -1142,7 +1148,7 @@
     "key": "scoreboard/home/score",
     "x": 210,
     "y": 240,
-    "wires": [["b4a3563fd4aa537b"]]
+    "wires": [["b4a3563fd4aa537b"], [], []]
   },
   {
     "id": "0323a5c072e81441",
@@ -1153,7 +1159,7 @@
     "key": "scoreboard/guest/score",
     "x": 210,
     "y": 300,
-    "wires": [["a81dde41ae40c901"]]
+    "wires": [["a81dde41ae40c901"], [], []]
   },
   {
     "id": "ba8b5ebb9114fa5f",
@@ -1168,8 +1174,8 @@
     "height": 0,
     "wrap": false,
     "passthru": false,
-    "topic": "topic",
-    "topicType": "msg",
+    "topic": "scoreboard/home/set",
+    "topicType": "str",
     "format": "{{value}}",
     "min": 0,
     "max": "99",
@@ -1192,8 +1198,8 @@
     "height": 0,
     "wrap": false,
     "passthru": false,
-    "topic": "topic",
-    "topicType": "msg",
+    "topic": "scoreboard/guest/set",
+    "topicType": "str",
     "format": "{{value}}",
     "min": 0,
     "max": "99",
@@ -1212,7 +1218,7 @@
     "key": "scoreboard/home/set",
     "x": 200,
     "y": 380,
-    "wires": [["ba8b5ebb9114fa5f"]]
+    "wires": [["ba8b5ebb9114fa5f"], [], []]
   },
   {
     "id": "cb9c4a108c85edf3",
@@ -1223,7 +1229,7 @@
     "key": "scoreboard/guest/set",
     "x": 200,
     "y": 440,
-    "wires": [["4e630015056f8f9f"]]
+    "wires": [["4e630015056f8f9f"], [], []]
   },
   {
     "id": "071c0ba0aec72781",
@@ -1232,9 +1238,11 @@
     "name": "",
     "server": "acf29aedb2cb6444",
     "key": "scoreboard/switched",
+    "unique": false,
+    "liveOnly": false,
     "x": 200,
     "y": 520,
-    "wires": [["4ad7e81cc551204d"]]
+    "wires": [["4ad7e81cc551204d"], [], []]
   },
   {
     "id": "4ad7e81cc551204d",
@@ -1249,8 +1257,8 @@
     "height": 0,
     "passthru": false,
     "decouple": "true",
-    "topic": "topic",
-    "topicType": "msg",
+    "topic": "scoreboard/switched",
+    "topicType": "str",
     "style": "",
     "onvalue": "true",
     "onvalueType": "bool",
@@ -1311,6 +1319,10 @@
     "z": "a1b3368ead2e00e5",
     "name": "",
     "server": "acf29aedb2cb6444",
+    "key": "topic",
+    "keyType": "msg",
+    "value": "payload",
+    "valueType": "msg",
     "x": 770,
     "y": 380,
     "wires": []
@@ -1349,7 +1361,7 @@
     "key": "scoreboard/theme",
     "x": 190,
     "y": 40,
-    "wires": [["f1a545a11502e28c"]]
+    "wires": [["f1a545a11502e28c"], [], []]
   },
   {
     "id": "f1a545a11502e28c",
@@ -1378,8 +1390,8 @@
       }
     ],
     "payload": "",
-    "topic": "topic",
-    "topicType": "msg",
+    "topic": "scoreboard/theme",
+    "topicType": "str",
     "className": "",
     "x": 420,
     "y": 40,
